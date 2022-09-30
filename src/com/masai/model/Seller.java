@@ -11,17 +11,21 @@ public class Seller {
 
 	private List<Product> products;
 
+	private List<Product> itemsSold;
+
 	public Seller() {
 		super();
 	}
 
-	public Seller(Integer sellerId, String firstName, String lastName, Address address, List<Product> products) {
+	public Seller(Integer sellerId, String firstName, String lastName, Address address, List<Product> products,
+			List<Product> itemsSold) {
 		super();
 		this.sellerId = sellerId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
 		this.products = products;
+		this.itemsSold = itemsSold;
 	}
 
 	public Integer getSellerId() {
@@ -62,6 +66,14 @@ public class Seller {
 
 	public void setProducts(List<Product> products) {
 		this.products = products;
+	}
+
+	public List<Product> getItemsSold() {
+		return itemsSold;
+	}
+
+	public void setItemsSold(List<Product> itemsSold) {
+		this.itemsSold = itemsSold;
 	}
 
 }

@@ -5,16 +5,18 @@ public class Product {
 	private Integer productId;
 	private String productName;
 	private Integer productPrice;
+	private Integer quantity;
 
-	public Product(Integer productId, String productName, Integer productPrice) {
+	public Product() {
+		super();
+	}
+
+	public Product(Integer productId, String productName, Integer productPrice, Integer quantity) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.productPrice = productPrice;
-	}
-
-	public Product() {
-		super();
+		this.quantity = quantity;
 	}
 
 	public Integer getProductId() {
@@ -39,6 +41,14 @@ public class Product {
 
 	public void setProductPrice(Integer productPrice) {
 		this.productPrice = productPrice;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 }
