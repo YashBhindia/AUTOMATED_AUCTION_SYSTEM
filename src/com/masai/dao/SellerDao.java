@@ -7,16 +7,16 @@ import com.masai.model.Seller;
 
 public interface SellerDao {
 
-	public Seller registerSeller(Seller seller) throws SellerException;
+	public Seller registerSeller(Seller seller);
 	
-	public List<Product> createListOfitems(List<Product> products) throws SellerException;
+	public List<Product> createListOfitems(List<Product> products);
 	
-	public Product updateProduct(Product product) throws Sellerexception;
+	public Product updateProduct(Product product);
 	
-	public Product addProductInList(Product product) throws SellerException;
+	public Product addProductInList(Product product);
 	
-	public Product removeProductInList(Product product) throws SellerException;
+	public Product removeProductInList(Product product);
 	
-	public List<Product> soldItems(int sellerId) throws SellerException;
+	public List<Product> soldItems(int sellerId);
 	
 }

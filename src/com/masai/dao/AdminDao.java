@@ -8,11 +8,11 @@ import com.masai.model.Seller;
 
 public interface AdminDao {
 
-	public List<Buyer> viewBuyerList() throws BuyerException;
+	public List<Buyer> viewBuyerList();
 	
-	public List<Seller> viewSellerList() throws SellerException;
+	public List<Seller> viewSellerList();
 	
-	public List<Product> dailySellingReport() throws SellerException;
+	public List<Product> dailySellingReport();
 	
 	
 }
