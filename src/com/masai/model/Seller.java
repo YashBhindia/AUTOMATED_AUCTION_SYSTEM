@@ -1,79 +1,52 @@
 package com.masai.model;
 
-import java.util.List;
 
 public class Seller {
 
-	private Integer sellerId;
-	private String firstName;
-	private String lastName;
-	private Address address;
-
-	private List<Product> products;
-
-	private List<Product> itemsSold;
-
+	private int SellerId;
+	private String Name;
+	private String Email;
+    private String Password;
 	public Seller() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
-
-	public Seller(Integer sellerId, String firstName, String lastName, Address address, List<Product> products,
-			List<Product> itemsSold) {
+	public Seller(Integer sellerId, String name, String email, String password) {
 		super();
-		this.sellerId = sellerId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.products = products;
-		this.itemsSold = itemsSold;
+		SellerId = sellerId;
+		Name = name;
+		Email = email;
+		Password = password;
 	}
-
 	public Integer getSellerId() {
-		return sellerId;
+		return SellerId;
 	}
-
 	public void setSellerId(Integer sellerId) {
-		this.sellerId = sellerId;
+		SellerId = sellerId;
 	}
-
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return Name;
 	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		Name = name;
 	}
-
-	public String getLastName() {
-		return lastName;
+	public String getEmail() {
+		return Email;
 	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setEmail(String email) {
+		Email = email;
 	}
-
-	public Address getAddress() {
-		return address;
+	public String getPassword() {
+		return Password;
 	}
-
-	public void setAddress(Address address) {
-		this.address = address;
+	public void setPassword(String password) {
+		Password = password;
 	}
-
-	public List<Product> getProducts() {
-		return products;
+	@Override
+	public String toString() {
+		return "Seller [SellerId=" + SellerId + ", Name=" + Name + ", Email=" + Email + ", Password=" + Password + "]";
 	}
-
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
-
-	public List<Product> getItemsSold() {
-		return itemsSold;
-	}
-
-	public void setItemsSold(List<Product> itemsSold) {
-		this.itemsSold = itemsSold;
-	}
+	
+    
 
 }
