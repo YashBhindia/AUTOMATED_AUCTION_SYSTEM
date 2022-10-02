@@ -1,13 +1,10 @@
 package com.masai.dao;
 
-import com.masai.model.Buyer;
-import com.masai.model.Seller;
+
+import com.masai.model.Administrator;
+
 
 public interface AdminDao {
 
-	public Buyer getBuyer();
-	
-	public Seller getSeeler();
-	
-	
+	public Administrator loginAdmin(String Name, String password);
 }

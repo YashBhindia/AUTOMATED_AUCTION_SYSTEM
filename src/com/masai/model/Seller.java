@@ -11,17 +11,17 @@ public class Seller {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Seller(Integer sellerId, String name, String email, String password) {
+	public Seller(int sellerId, String name, String email, String password) {
 		super();
 		SellerId = sellerId;
 		Name = name;
 		Email = email;
 		Password = password;
 	}
-	public Integer getSellerId() {
+	public int getSellerId() {
 		return SellerId;
 	}
-	public void setSellerId(Integer sellerId) {
+	public void setSellerId(int sellerId) {
 		SellerId = sellerId;
 	}
 	public String getName() {

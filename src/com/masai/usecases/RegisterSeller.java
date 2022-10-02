@@ -8,7 +8,7 @@ import com.masai.model.Seller;
 
 public class RegisterSeller {
 
-public static void main(String[] args) {
+public static void RegisterSeller(){
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -26,11 +26,11 @@ public static void main(String[] args) {
 		
 		SellerDao bdao = new SellerDaoImpl();
 		
-		Seller s = new Seller();
-		s.setSellerId(id);
-		s.setName(name);
-		s.setEmail(email);
-		s.setPassword(password);
+		Seller s = new Seller(id, name, email, password);
+//		s.setSellerId(id);
+//		s.setName(name);
+//		s.setEmail(email);
+//		s.setPassword(password);
 		
 		String result = bdao.RegisterSeller(s);
 		System.out.println(result);

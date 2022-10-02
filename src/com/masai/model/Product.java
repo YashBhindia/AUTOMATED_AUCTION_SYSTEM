@@ -2,17 +2,17 @@ package com.masai.model;
 
 public class Product {
 
-	private Integer productId;
+	private int productId;
 	private String productName;
-	private Integer productPrice;
-	private Integer quantity;
+	private int productPrice;
+	private int quantity;
 	private String productCategory;
 	private int SeelerId;
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Product(Integer productId, String productName, Integer productPrice, Integer quantity,
+	public Product(int productId, String productName, int productPrice, int quantity,
 			String productCategory, int seelerId) {
 		super();
 		this.productId = productId;
@@ -22,10 +22,10 @@ public class Product {
 		this.productCategory = productCategory;
 		SeelerId = seelerId;
 	}
-	public Integer getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(Integer productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 	public String getProductName() {
@@ -34,16 +34,16 @@ public class Product {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public Integer getProductPrice() {
+	public int getProductPrice() {
 		return productPrice;
 	}
-	public void setProductPrice(Integer productPrice) {
+	public void setProductPrice(int productPrice) {
 		this.productPrice = productPrice;
 	}
-	public Integer getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 	public String getProductCategory() {

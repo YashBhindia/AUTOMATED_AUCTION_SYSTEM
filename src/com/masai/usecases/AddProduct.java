@@ -8,7 +8,7 @@ import com.masai.model.Product;
 
 public class AddProduct {
 
-	public static void main(String[] args) {
+	public static void AddProduct() {
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -32,13 +32,8 @@ public class AddProduct {
 
 		SellerDao s = new SellerDaoImpl();
 
-		Product p = new Product();
-		p.setProductId(id);
-		p.setProductName(name);
-		p.setProductPrice(price);
-		p.setQuantity(quantity);
-		p.setProductCategory(category);
-		p.setSeelerId(S_id);
+		Product p = new Product(id, name, price, quantity, category, id);
+
 
 		String result = s.ProductList(p);
 		System.out.println(result);

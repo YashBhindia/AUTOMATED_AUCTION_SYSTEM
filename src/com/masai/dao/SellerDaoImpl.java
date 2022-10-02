@@ -2,13 +2,17 @@ package com.masai.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.masai.exceptions.SellerException;
 import com.masai.model.Product;
 import com.masai.model.Seller;
 import com.masai.utility.DBUtil;
 
-public class SellerDaoImpl implements SellerDao{
+public  class SellerDaoImpl implements SellerDao{
 
 	@Override
 	public String RegisterSeller(Seller seller) {
@@ -42,7 +46,45 @@ public class SellerDaoImpl implements SellerDao{
 	}
 	
 	
-
+	
+	@Override
+	public List<Seller> getSeller() throws SellerException {
+		
+		    List<Seller> s = new ArrayList<>();
+		
+            try (Connection conn = DBUtil.provideConnection()){
+			
+            PreparedStatement ps=  conn.prepareStatement("select * from Seller");
+			
+			ResultSet rs =  ps.executeQuery();
+			
+			while(rs.next()) 
+			{
+				int id= rs.getInt("SellerId");
+				String name= rs.getString("Name");
+				String email = rs.getString("Email");
+				String password = rs.getString("Password");
+				
+				s.add(new Seller(id, name, email, password));
+			
+			}
+			
+			if(s.size()==0) {
+				System.out.println("No Record Found");
+			}
+			
+            } catch (Exception e) {
+    			e.printStackTrace();
+    		}	
+		
+		// TODO Auto-generated method stub
+		return s;
+	
+	
+	}
+	
+	
+	
 	@Override
 	public String ProductList(Product p) {
 		
@@ -107,7 +149,7 @@ public class SellerDaoImpl implements SellerDao{
 		
 		try (Connection conn = DBUtil.provideConnection()) {
 
-			PreparedStatement ps = conn.prepareStatement("Delete  From Product Where P_Id = ?;");
+			PreparedStatement ps = conn.prepareStatement("Delete  From Product Where productId = ?;");
 			ps.setInt(1, p.getProductId());
 			
 
@@ -123,5 +165,9 @@ public class SellerDaoImpl implements SellerDao{
 		
 		return message;
 	}
+
+
+
+
 	
 }
