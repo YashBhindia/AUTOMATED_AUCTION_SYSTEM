@@ -6,7 +6,7 @@
 
 
 
-# Installation & Run
+
 
 
 # Tech Stack
